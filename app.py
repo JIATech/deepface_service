@@ -22,6 +22,10 @@ def health_check():
 @app.route('/verify', methods=['POST'])
 def verify_face():
     try:
+        # Iniciar medición de tiempo
+        import time
+        start_time = time.time()
+        
         # Obtener datos de la solicitud
         data = request.json
         
@@ -87,10 +91,14 @@ def verify_face():
                 distance_metric='cosine'
             )
             
+            # Calcular tiempo de procesamiento
+            process_time = time.time() - start_time
+            
             # Preparar la respuesta - convertir tipos NumPy a tipos nativos de Python
             response = {
                 "verified": bool(result['verified']),  # Convertir bool_ a bool nativo
-                "similarity": float(1 - result['distance'])  # Convertir a float nativo
+                "similarity": float(1 - result['distance']),  # Convertir a float nativo
+                "process_time_seconds": round(process_time, 3)  # Tiempo en segundos con 3 decimales
             }
             
             return jsonify(response), 200

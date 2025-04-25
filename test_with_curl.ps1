@@ -95,5 +95,10 @@ catch {
 Write-Host "Verificado: $($jsonResult.verified)"
 Write-Host "Similitud: $($jsonResult.similarity)"
 
+# Mostrar tiempo de procesamiento si está disponible
+if ($jsonResult.process_time_seconds) {
+    Write-Host "Tiempo de procesamiento: $($jsonResult.process_time_seconds) segundos" -ForegroundColor Cyan
+}
+
 # Devolver el resultado
 return $jsonResult

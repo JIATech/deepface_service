@@ -71,12 +71,14 @@ Por defecto, el servicio se ejecuta en `http://localhost:7424`
 ```json
 {
   "verified": true,
-  "similarity": 0.95
+  "similarity": 0.95,
+  "process_time_seconds": 1.234
 }
 ```
 
 - `verified`: booleano que indica si las caras pertenecen a la misma persona
 - `similarity`: valor entre 0 y 1 que indica el grado de similitud (más cercano a 1 = más similar)
+- `process_time_seconds`: tiempo de procesamiento en segundos que toma verificar las imágenes
 
 **Códigos de respuesta**:
 
