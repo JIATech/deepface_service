@@ -1,0 +1,7 @@
+deepface==0.0.79
+Flask==2.2.3
+Werkzeug==2.2.3
+numpy==1.24.2
+Pillow==9.4.0
+python-dotenv==1.0.0
+opencv-python==4.7.0.72

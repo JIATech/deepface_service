@@ -1,0 +1,42 @@
+# Entornos virtuales
+venv/
+env/
+ENV/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribución / empaquetado
+dist/
+build/
+*.egg-info/
+
+# Carpetas y archivos específicos de DeepFace
+.deepface/
+
+# Archivos temporales
+*.log
+*.tmp
+.DS_Store
+.vscode/
+.idea/
+
+# Configuración local
+.env
+.env.local
+
+# Imágenes de prueba (opcional, comenta si quieres incluirlas en el repositorio)
+*.jpg
+*.png
+*.webp
+
+# Archivos de respaldo
+*.bak
+
+# Archivos de Docker
+.docker/
+docker-volumes/

@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  deepface-service:
+    build: .
+    ports:
+      - "7424:7424"
+    volumes:
+      - ./:/app
+      - deepface_models:/root/.deepface/weights
+    restart: unless-stopped
+    environment:
+      - PORT=7424
+
+volumes:
+  deepface_models:
+    # Volumen para almacenar los modelos de DeepFace y evitar descargas repetidas

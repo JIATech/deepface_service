@@ -1,0 +1,48 @@
+# Control de versiones
+.git
+.gitignore
+.gitattributes
+
+# Entornos Python
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Archivos de configuración Docker y DevOps
+docker-compose*.yml
+docker-compose*.yaml
+Dockerfile*
+.dockerignore
+
+# Archivos de documentación
+README*
+LICENSE
+CHANGELOG*
+*.md
+docs/
+
+# Archivos específicos del desarrollo
+.vscode/
+.idea/
+.DS_Store
+*.log
+*.tmp
+*.bak
+
+# Entornos virtuales y configuración local
+.env
+.env.local
+
+# Directorios que no son relevantes para la aplicación Docker
+test/
+tests/
+.github/
+
+# Imágenes de muestra (si prefieres no incluirlas, descomenta esta línea)
+*.jpg
+*.png
+*.webp
